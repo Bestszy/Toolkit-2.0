@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ToolkitTEST</title>
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body onload = "inner()">
+    <div id="container">
+    <div class="shapes" id="rectangel">
+        <h4 id="width"></h4>
+        <h4 id="colorType"></h4>
+        <h4 id="sizeCM"></h4>
+        <h4 id="profil"></h4>
+        <h4 id="inDruk">0</h4>
+        <h4 id="inWycena">0</h4>
+    </div>
+    <div class='button'>
+        <label>
+        <input class="select" id ="druk" type="radio" onclick="mode('druk')" name="DRUK" checked>
+        <span class="druk">druk</span>
+        </label>
+        <label>
+        <input class="select" id ="wycena" type="radio" onclick="mode('wycena')" name="DRUK">
+        <span class="wycena">wycena</span>
+        </label>
+    </div>
+    <div class="conteainer2">
+        <div><input class = 'mode' id ='inputWidth' onkeyup="widthF()" onkeypress="return isNumberKey(event)"/>
+        <label for="inputWidth">width</label></div>
+        <div><input class = 'mode' id ='inputHeight' onkeyup="heightF()" onkeypress="return isNumberKey(event)"/>
+        <label for="inputHeight">height</label></div>
+        <div><input class = 'mode' id ='inputDPI' onkeyup="dpiF()" onkeypress="return isNumberKey(event)"/>
+        <label for="inputDPI">dpi</label></div>
+        <div><button class = 'mode' id="reSizeButton" onclick="resizeAply()" >apply</button></div>
+    </div>
+        <div class = "conteainer3">
+        </div>
+    <div id="conteainer4">
+    <button class='btn' id="kreton" onclick= "directory('kreton')">kreton</button>
+    <button class='btn' id="satyna" onclick= "directory('satyna')">satyna</button>
+    <button class='btn' id="woal" onclick= "directory('woal')">woal</button>
+    <button class='btn' id="panama" onclick= "directory('panama')">panama</button>
+    <button class='btn' id="gabardyna" onclick= "directory('gabardyna')">gabardyna</button>
+    <button class='btn' id="jersey 170" onclick= "directory('jersey 170')">jersey 170</button>
+    <button class='btn' id="jersey 200" onclick= "directory('jersey 200')">jersey 200</button>
+    <button class='btn' id="jersey 230" onclick= "directory('jersey 230')">jersey 230</button>
+    <button class='btn' id="interlock" onclick= "directory('interlock')">interloc</button>
+    <button class='btn' id="intelock new" onclick= "directory('interlock new')">interlock new</button>
+    <button class='btn' id="pętelka 250" onclick= "directory('pętelka 250')">pętelka 250</button>
+    <button class='btn' id="pętelka 300" onclick= "directory('pętelka 300')">pętelka 300</button>
+    <button class='btn' id="birdseye" onclick= "directory('birdseye')">birdseye</button>
+    <button class='btn' id="wafel" onclick= "directory('Wafel')">wafel</button>
+    <button class='btn' id="muślin double" onclick= "directory('muślin double')">muślin double</button>
+    <button class='btn' id="viscose" onclick= "directory('viscose')">viscose</button>
+    <button class='btn' id="popelina" onclick= "directory('popelina')">popelina</button>
+    <button class='btn' id="MRC satyna" onclick= "directory('MRC Satyna')">MRC satyna</button>
+    <button class='btn' id="BIO pętelka 250" onclick= "directory('BIO popelina')" style= "background-color:#d4d4d4">ORG popelina</button>
+    <button class='btn' id="half panama" onclick= "directory('half panama')" style= "background-color:#d4d4d4">ORG panama</button>
+    <button class='btn' id="BIO Canvas" onclick= "directory('ORG Canvas')" style= "background-color:#d4d4d4">ORG canvas</button>
+    <button class='btn' id="ORG Perkal" onclick= "directory('ORG Perkal')" style= "background-color:#d4d4d4">ORG perkal</button>
+    <button class='btn' id="BIO satyna" onclick= "directory('BIO satyna')" style= "background-color:#d4d4d4">ORG satyna</button>
+    <button class='btn' id="BIO jersey 200" onclick= "directory('BIO jersey 200')" style= "background-color:#d4d4d4">ORG J200</button>
+    <button class='btn' id="BIO pętelka 250" onclick= "directory('BIO pętelka 250')" style= "background-color:#d4d4d4">ORG P250</button>
+    <button class='btn' id="ORGDRILL" onclick= "directory('ORGDRILL')" style= "background-color:#d4d4d4">ORG drill</button>
+    <button class='btn' id="ORGŚCIAGACZ" onclick= "directory('ORGŚCIAGACZ')" style= "background-color:#d4d4d4">ORG ściągacz</button>
+    <button class='btn' id="sport lycra" onclick= "directory('sport lycra')" style= "background-color:#ffc8b2">sport lycra</button>
+    <button class='btn' id="szyfon" onclick= "directory('szyfon')" style= "background-color:#ffc8b2">szyfon</button>
+    <button class='btn' id="tkanina sukienkowa" onclick= "directory('tkanina sukienkowa')" style= "background-color:#ffc8b2">tkanina sukienkowa</button>
+    <button class='btn' id="modern jersey" onclick= "directory('modern jersey')" style= "background-color:#ffc8b2">modern jersey</button>
+    <button class='btn' id="welur" onclick= "directory('welur')" style= "background-color:#ffc8b2">welur</button>
+    <button class='btn' id="ortalion" onclick= "directory('ortalion')" style= "background-color:#ffc8b2">ortalion</button>
+    <button class='btn' id="SOFTSHELL" onclick= "directory('SOFTSHELL')" style= "background-color:#ffc8b2">softshell</button>
+    <button class='btn' id="pumka" onclick= "directory('pumka')" style="background-color:#d6ffaf">mesh soft</button>
+    <button class='btn' id="Mesh" onclick= "directory('Mesh')" style="background-color:#d6ffaf">mesh stretch</button>
+    <button class='btn' id="Łezka S-14" onclick= "directory('Łezka S-14')" style="background-color:#d6ffaf">mesh birds eye</button>
+    <button class='btn' id="Super Fit" onclick= "directory('Super Fit')" style="background-color:#d6ffaf"> swimwear lycra</button>
+    <button class='btn' id="Push Up Dres 300" onclick= "directory('Push Up Dres 300')" style="background-color:#d6ffaf">leggings lycra</button>
+    <button class='btn' id="Elanka" onclick= "directory('Elanka')" style="background-color:#d6ffaf">polyester single</button>
+    <button class='btn' id="kodura" onclick= "directory('kodura')" style="background-color:#d6ffaf">outdoor fabric </button>
+    <button class='btn' id="Podszewka matowa" onclick= "directory('Podszewka matowa')" style="background-color:#d6ffaf">lining matte</button>
+    <button class='btn' id="Podszewka satynowa" onclick= "directory('Podszewka satynowa')" style="background-color:#d6ffaf">lining satin</button>
+    <button class='btn' id="popelina" onclick= "directory('velvet stretch')" style="background-color:#d6ffaf">velvet stretch</button>
+    <button class='btn' id="popelina" onclick= "directory('sherpa fleece')" style="background-color:#d6ffaf">sherpa fleece</button>
+    <button class='btn' id="silk satin" onclick= "directory('silk satin')">silk satin</button>
+    <button class='btn' id="silk twill" onclick= "directory('silk twill')">silk twill</button>
+    <button class='btn' id="silk crepe" onclick= "directory('silk crepe')">silk crepe</button>
+    <button class='btn' id="silk twill" onclick= "directory('REA J200')">REA J200</button>
+    <button class='btn' id="silk crepe" onclick= "directory('REA P250')">REA P250</button>
+    
+    <button class='btn' id="test" onclick= "directory('test')" style="background-color: gold">test</button>
+
+    </div>
+    <div class="conteainer5">
+        <button class="copybtn" onclick="copyPath('copy')">c</button>
+            <p id="copy"></p>
+        <input class = 'check2' name = "saveAll" id ="saveAll" type='checkbox'/><label for="saveAll">save all</label>
+        <input class = 'check2' name = "closeF" id ="closeF" type='checkbox'checked /><label for="closeF">name DPI</label>
+        </div>
+    <div class="conteainer6">
+        <input class = 'check' name = "box" id ="box" type='checkbox'/><label for="box"></label>
+        <input class = 'form' id ='form' placeholder="enter new file name" disabled/>
+        <input class = 'check' name= "box2" id ="box2"type='checkbox'/><label for="box2"></label>
+        <input class = 'form' id ='form2' placeholder="enter subfolder name" disabled/>
+    </div>
+    <!-- <div class="conteainer7"> -->
+
+    </div>
+</div>
+<!-- close the file
+    <div>
+        <input type="checkbox" id="closeFile" name="close file">
+        <label for="closeFile">close file</label>
+    </div> 
+-->
+<!-- copy path
+    <div><button onclick="copyElementText('toCopy')">copy path</button>
+        <h6 id="toCopy"></h6>
+    </div>
+-->
+<!-- sweet thief  -->
+    <script type="text/javascript" src="../js/CSInterface.js"></script>
+    <script type="text/javascript" src="../js/json2.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/index.jsx"></script>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+</body>
+</html>
